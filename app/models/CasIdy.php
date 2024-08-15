@@ -3,8 +3,10 @@
 namespace app\models;
 
 use app\core\Database;
+use MessageDictionary;
 use PDO;
 
+require_once('app/shared/message_dictionary.php');
 
 class CasIdy
 {
@@ -23,47 +25,11 @@ class CasIdy
     private $cnx;
     private $tbl = 'CasIdy';
 
+    public $messages = array();
+
     public function __construct()
     {
         $this->cnx = new Database();
-    }
-
-    // -- set -- //
-    public function setCasIdyCod($inCasIdyCod)
-    {
-        $this->attCasIdyCod = $inCasIdyCod;
-    }
-    public function setCasIdyDca($inCasIdyDca)
-    {
-        $this->attCasIdyDca = $inCasIdyDca;
-    }
-    public function setCasIdyDmd($inCasIdyDmd)
-    {
-        $this->attCasIdyDmd = $inCasIdyDmd;
-    }
-    public function setCasIdyDsc($inCasIdyDsc)
-    {
-        $this->attCasIdyDsc = $inCasIdyDsc;
-    }
-    public function setCasIdyLck($inCasIdyLck)
-    {
-        $this->attCasIdyLck = $inCasIdyLck;
-    }
-    public function setCasIdyTkn($inCasIdyTkn)
-    {
-        $this->attCasIdyTkn = $inCasIdyTkn;
-    }
-    public function setCasIdyUpt($inCasIdyUpt)
-    {
-        $this->attCasIdyUpt = $inCasIdyUpt;
-    }
-    public function setCasIdyExp($inCasIdyExp)
-    {
-        $this->attCasIdyExp = $inCasIdyExp;
-    }
-    public function setCasIdyAtz($inCasIdyAtz)
-    {
-        $this->attCasIdyAtz = $inCasIdyAtz;
     }
 
     // -- get -- //
@@ -102,6 +68,44 @@ class CasIdy
     public function getCasIdyAtz()
     {
         return $this->attCasIdyAtz;
+    }
+
+    // -- set -- //
+    public function setCasIdyCod($inCasIdyCod)
+    {
+        $this->attCasIdyCod = $inCasIdyCod;
+    }
+    public function setCasIdyDca($inCasIdyDca)
+    {
+        $this->attCasIdyDca = $inCasIdyDca;
+    }
+    public function setCasIdyDmd($inCasIdyDmd)
+    {
+        $this->attCasIdyDmd = $inCasIdyDmd;
+    }
+    public function setCasIdyDsc($inCasIdyDsc)
+    {
+        $this->attCasIdyDsc = $inCasIdyDsc;
+    }
+    public function setCasIdyLck($inCasIdyLck)
+    {
+        $this->attCasIdyLck = $inCasIdyLck;
+    }
+    public function setCasIdyTkn($inCasIdyTkn)
+    {
+        $this->attCasIdyTkn = $inCasIdyTkn;
+    }
+    public function setCasIdyUpt($inCasIdyUpt)
+    {
+        $this->attCasIdyUpt = $inCasIdyUpt;
+    }
+    public function setCasIdyExp($inCasIdyExp)
+    {
+        $this->attCasIdyExp = $inCasIdyExp;
+    }
+    public function setCasIdyAtz($inCasIdyAtz)
+    {
+        $this->attCasIdyAtz = $inCasIdyAtz;
     }
 
     // -- crud -- //
@@ -388,6 +392,11 @@ class CasIdy
 
         $stmt = $this->cnx->executeQuery($qry, $parameters);
         $rows = $stmt->rowCount();
+
+        if ($rows > 0) {
+            $message  = new MessageDictionary;
+            array_push($this->messages, $message->getDictionaryError(1, "Messages", "Duplicate Key."));
+        }
         
         return !boolval($rows);
     }
@@ -395,6 +404,12 @@ class CasIdy
     private function check_referencial_key()
     {
         $rows = 0;
+
+        if ($rows > 0) {
+            $message  = new MessageDictionary;
+            array_push($this->messages, $message->getDictionaryError(1, "Messages", "Referential integrity error."));
+        }
+
         return !boolval($rows);
     }
 }

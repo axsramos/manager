@@ -140,6 +140,458 @@
 			]
 		},
 		{
+			"name": "Program",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPrg"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPrg/id/program"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPrg"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPrg/id/program"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasPrgCod\":\"program\",\r\n    \"CasPrgDca\":\"2000-12-31 23:59:59\",\r\n    \"CasPrgDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasPrgDsc\":\"Program Test\",\r\n    \"CasPrgBlq\":\"N\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPrg"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasPrgCod\":\"program\",\r\n    \"CasPrgDca\":\"2000-12-31 23:59:59\",\r\n    \"CasPrgDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasPrgDsc\":\"Program Test\",\r\n    \"CasPrgBlq\":\"S\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPrg"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Module",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMdl"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMdl/id/module"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMdl"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMdl/id/module"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasMdlCod\":\"module\",\r\n    \"CasMdlDca\":\"2000-12-31 23:59:59\",\r\n    \"CasMdlDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasMdlDsc\":\"Module Test\",\r\n    \"CasMdlBlq\":\"N\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMdl"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasMdlCod\":\"module\",\r\n    \"CasMdlDca\":\"2000-12-31 23:59:59\",\r\n    \"CasMdlDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasMdlDsc\":\"Module Test\",\r\n    \"CasMdlBlq\":\"S\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMdl"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Program Module",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMpr"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMpr/id/module/program"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMpr"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMpr/id/module/program"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasMdlCod\":\"module\",\r\n    \"CasPrgCod\":\"program\",\r\n    \"CasMprDca\":\"2000-12-31 23:59:58\",\r\n    \"CasMprDmd\":\"2000-12-31 23:59:58\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMpr"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasMdlCod\":\"module\",\r\n    \"CasPrgCod\":\"program\",\r\n    \"CasMprDca\":\"2000-12-31 23:59:58\",\r\n    \"CasMprDmd\":\"2000-12-31 23:59:59\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMpr"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Funcionality Program",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFpr"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFpr/id/1/program"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFpr"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFpr/id/1/program"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFunCod\":\"1\",\r\n    \"CasPrgCod\":\"program\",\r\n    \"CasFprDca\":\"2000-12-31 23:59:58\",\r\n    \"CasFprDmd\":\"2000-12-31 23:59:58\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFpr"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFunCod\":\"1\",\r\n    \"CasPrgCod\":\"program\",\r\n    \"CasFprDca\":\"2000-12-31 23:59:58\",\r\n    \"CasFprDmd\":\"2000-12-31 23:59:59\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFpr"
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Identity",
 			"item": [
 				{
@@ -247,6 +699,2040 @@
 							}
 						},
 						"url": "{{base_url}}:{{port}}/{{app}}/CasIdy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Funcionality",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFun"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFun/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFun"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFun/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFunCod\":\"1\",\r\n    \"CasFunDca\":\"2000-12-31 23:59:59\",\r\n    \"CasFunDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasFunDsc\":\"funcionality\",\r\n    \"CasFunBlq\":\"N\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFun"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFunCod\":\"1\",\r\n    \"CasFunDca\":\"2000-12-31 23:59:59\",\r\n    \"CasFunDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasFunDsc\":\"funcionality\",\r\n    \"CasFunBlq\":\"S\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFun"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Workstation",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasWks"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasWks/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasWks"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasWks/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasWksCod\":\"1\",\r\n    \"CasWksDca\":\"2000-12-31 23:59:59\",\r\n    \"CasWksDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasWksDsc\":\"Workstation\",\r\n    \"CasWksBlq\":\"N\",\r\n    \"CasWksMac\":\"A8-80-55-9B-BE-1A\",\r\n    \"CasWksEip\":\"127.0.0.1\",\r\n    \"CasWksChv\":\"08958451-5b46-11ef-b97e-00090faa0001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasWks"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasWksCod\":\"1\",\r\n    \"CasWksDca\":\"2000-12-31 23:59:59\",\r\n    \"CasWksDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasWksDsc\":\"Workstation Test\",\r\n    \"CasWksBlq\":\"S\",\r\n    \"CasWksMac\":\"A8-80-55-9B-BE-1A\",\r\n    \"CasWksEip\":\"127.0.0.1\",\r\n    \"CasWksChv\":\"08958451-5b46-11ef-b97e-00090faa0001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasWks"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Web Session",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwb"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwb/id/9732daf0-5b46-11ef-b97e-00090faa0001"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwb"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwb/id/9732daf0-5b46-11ef-b97e-00090faa0001"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasSwbCod\":\"9732daf0-5b46-11ef-b97e-00090faa0001\",\r\n    \"CasSwbDca\":\"2000-12-31 23:59:59\",\r\n    \"CasSwbDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasSwbIdy\":\"00090faa0001\",\r\n    \"CasSwbBlq\":\"N\",\r\n    \"CasSwbWks\":\"1\",\r\n    \"CasSwbUsu\":\"admin\",\r\n    \"CasSwbBrw\":\"opera\",\r\n    \"CasSwbIni\":\"2000-12-31 23:59:59\",\r\n    \"CasSwbFin\":\"2000-12-31 23:59:59\",\r\n    \"CasSwbUsrCod\":\"1\",\r\n    \"CasSwbWksCod\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwb"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasSwbCod\":\"9732daf0-5b46-11ef-b97e-00090faa0001\",\r\n    \"CasSwbDca\":\"2000-12-31 23:59:59\",\r\n    \"CasSwbDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasSwbIdy\":\"00090faa0001\",\r\n    \"CasSwbBlq\":\"S\",\r\n    \"CasSwbWks\":\"1\",\r\n    \"CasSwbUsu\":\"admin\",\r\n    \"CasSwbBrw\":\"opera\",\r\n    \"CasSwbIni\":\"2000-12-31 23:59:59\",\r\n    \"CasSwbFin\":\"2000-12-31 23:59:59\",\r\n    \"CasSwbUsrCod\":\"1\",\r\n    \"CasSwbWksCod\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwb"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Session Navigation",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwn"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwn/id/9732daf0-5b46-11ef-b97e-00090faa0001/1"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwn"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwn/id/9732daf0-5b46-11ef-b97e-00090faa0001/1"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasSwbCod\":\"9732daf0-5b46-11ef-b97e-00090faa0001\",\r\n    \"CasSwnCod\":\"1\",\r\n    \"CasSwnDca\":\"2000-12-31 23:59:58\",\r\n    \"CasSwnDmd\":\"2000-12-31 23:59:58\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwn"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasSwbCod\":\"9732daf0-5b46-11ef-b97e-00090faa0001\",\r\n    \"CasSwnCod\":\"1\",\r\n    \"CasSwnDca\":\"2000-12-31 23:59:58\",\r\n    \"CasSwnDmd\":\"2000-12-31 23:59:59\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwn"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Program Session",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwp"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwp/id/9732daf0-5b46-11ef-b97e-00090faa0001/program"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwp"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwp/id/9732daf0-5b46-11ef-b97e-00090faa0001/program"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasSwbCod\":\"9732daf0-5b46-11ef-b97e-00090faa0001\",\r\n    \"CasPrgCod\":\"program\",\r\n    \"CasSwpDca\":\"2000-12-31 23:59:58\",\r\n    \"CasSwpDmd\":\"2000-12-31 23:59:58\",\r\n    \"CasSwpVch\":\"details\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwp"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasSwbCod\":\"9732daf0-5b46-11ef-b97e-00090faa0001\",\r\n    \"CasPrgCod\":\"program\",\r\n    \"CasSwpDca\":\"2000-12-31 23:59:58\",\r\n    \"CasSwpDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasSwpVch\":\"details test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasSwp"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasUsr"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasUsr/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasUsr"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasUsr/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasUsrCod\":\"1\",\r\n    \"CasUsrDca\":\"2000-12-31 23:59:59\",\r\n    \"CasUsrDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasUsrDsc\":\"Admin\",\r\n    \"CasUsrBlq\":\"N\",\r\n    \"CasUsrDmn\":\"provider.net\",\r\n    \"CasUsrLgn\":\"admin@provider.net\",\r\n    \"CasUsrPwd\":\"00090faa0001\",\r\n    \"CasUsrChv\":\"45abe96e-5b4b-11ef-b97e-00090faa0001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasUsr"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasUsrCod\":\"1\",\r\n    \"CasUsrDca\":\"2000-12-31 23:59:59\",\r\n    \"CasUsrDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasUsrDsc\":\"Admin\",\r\n    \"CasUsrBlq\":\"S\",\r\n    \"CasUsrDmn\":\"provider.net\",\r\n    \"CasUsrLgn\":\"admin@provider.net\",\r\n    \"CasUsrPwd\":\"00090faa0001\",\r\n    \"CasUsrChv\":\"45abe96e-5b4b-11ef-b97e-00090faa0001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasUsr"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPfi"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPfi/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPfi"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPfi/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasPfiCod\":\"1\",\r\n    \"CasPfiDca\":\"2000-12-31 23:59:58\",\r\n    \"CasPfiDmd\":\"2000-12-31 23:59:58\",\r\n    \"CasPfiDsc\":\"profile\",\r\n    \"CasPfiBlq\":\"N\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPfi"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasPfiCod\":\"1\",\r\n    \"CasPfiDca\":\"2000-12-31 23:59:58\",\r\n    \"CasPfiDmd\":\"2000-12-31 23:59:58\",\r\n    \"CasPfiDsc\":\"profile\",\r\n    \"CasPfiBlq\":\"S\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPfi"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Profile",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPfu"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPfu/id/1/1"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPfu"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPfu/id/1/1"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasPfiCod\":\"1\",\r\n    \"CasUsrCod\":\"1\",\r\n    \"CasPfuDca\":\"2000-12-31 23:59:58\",\r\n    \"CasPfuDmd\":\"2000-12-31 23:59:58\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPfu"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasPfiCod\":\"1\",\r\n    \"CasUsrCod\":\"1\",\r\n    \"CasPfuDca\":\"2000-12-31 23:59:58\",\r\n    \"CasPfuDmd\":\"2000-12-31 23:59:59\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPfu"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authorization User Profile",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasApf"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasApf/id/1/1/program"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasApf"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasApf/id/1/1/program"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasPfiCod\":\"1\",\r\n    \"CasUsrCod\":\"1\",\r\n    \"CasPrgCod\":\"program\",\r\n    \"CasApfDca\":\"2000-12-31 23:59:58\",\r\n    \"CasApfDmd\":\"2000-12-31 23:59:58\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasApf"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasPfiCod\":\"1\",\r\n    \"CasUsrCod\":\"1\",\r\n    \"CasPrgCod\":\"program\",\r\n    \"CasApfDca\":\"2000-12-31 23:59:58\",\r\n    \"CasApfDmd\":\"2000-12-31 23:59:59\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasApf"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authorization Funcionality",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasAfu"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasAfu/id/1/1/program/1"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasAfu"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasAfu/id/1/1/program/1"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasPfiCod\":\"1\",\r\n    \"CasUsrCod\":\"1\",\r\n    \"CasPrgCod\":\"program\",\r\n    \"CasFunCod\":\"1\",\r\n    \"CasAfuDca\":\"2000-12-31 23:59:58\",\r\n    \"CasAfuDmd\":\"2000-12-31 23:59:58\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasAfu"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasPfiCod\":\"1\",\r\n    \"CasUsrCod\":\"1\",\r\n    \"CasPrgCod\":\"program\",\r\n    \"CasFunCod\":\"1\",\r\n    \"CasAfuDca\":\"2000-12-31 23:59:58\",\r\n    \"CasAfuDmd\":\"2000-12-31 23:59:59\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasAfu"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMnu"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMnu/id/menu"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMnu"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMnu/id/menu"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasMnuCod\":\"menu\",\r\n    \"CasMnuDca\":\"2000-12-31 23:59:59\",\r\n    \"CasMnuDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasMnuDsc\":\"Menu\",\r\n    \"CasMnuBlq\":\"N\",\r\n    \"CasMnuVch\":\"details script\",\r\n    \"CasMnuOrd\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMnu"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasMnuCod\":\"menu\",\r\n    \"CasMnuDca\":\"2000-12-31 23:59:59\",\r\n    \"CasMnuDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasMnuDsc\":\"Menu\",\r\n    \"CasMnuBlq\":\"S\",\r\n    \"CasMnuVch\":\"details script\",\r\n    \"CasMnuOrd\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMnu"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tree Menu",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMna"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMna/id/menu/1"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMna"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMna/id/menu/1"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasMnuCod\":\"menu\",\r\n    \"CasMnaCod\":\"1\",\r\n    \"CasMnaDca\":\"2000-12-31 23:59:59\",\r\n    \"CasMnaDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasMnaDsc\":\"Menu\",\r\n    \"CasMnaBlq\":\"N\",\r\n    \"CasMnaLnk\":\"#\",\r\n    \"CasMnaOrd\":\"1\",\r\n    \"CasMnaGrp\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMna"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasMnuCod\":\"menu\",\r\n    \"CasMnaCod\":\"1\",\r\n    \"CasMnaDca\":\"2000-12-31 23:59:59\",\r\n    \"CasMnaDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasMnaDsc\":\"Menu Test\",\r\n    \"CasMnaBlq\":\"S\",\r\n    \"CasMnaLnk\":\"#\",\r\n    \"CasMnaOrd\":\"1\",\r\n    \"CasMnaGrp\":\"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasMna"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invitation",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasCvt"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasCvt/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasCvt"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasCvt/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasCvtCod\":\"7d122310-5b57-11ef-b97e-00090faa0001\",\r\n    \"CasCvtDca\":\"2000-12-31 23:59:59\",\r\n    \"CasCvtDmd\":\"2000-12-31 23:59:58\",\r\n    \"CasCvtNme\":\"convite test\",\r\n    \"CasCvtLgn\":\"admin@provedor.net\",\r\n    \"CasCvtPar\":\"none\",\r\n    \"CasCvtLnk\":\"#\",\r\n    \"CasCvtBlq\":\"S\",\r\n    \"CasCvtBlqDtt\":\"2000-12-31 23:59:58\",\r\n    \"CasCvtEnv\":\"S\",\r\n    \"CasCvtEnvDtt\":\"2000-12-31 23:59:58\",\r\n    \"CasCvtCnf\":\"S\",\r\n    \"CasCvtCnfDtt\":\"2000-12-31 23:59:58\",\r\n    \"CasCvtChv\":\"00090faa0001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasCvt"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasCvtCod\":\"7d122310-5b57-11ef-b97e-00090faa0001\",\r\n    \"CasCvtDca\":\"2000-12-31 23:59:59\",\r\n    \"CasCvtDmd\":\"2000-12-31 23:59:58\",\r\n    \"CasCvtNme\":\"convite test\",\r\n    \"CasCvtLgn\":\"admin@provedor.net\",\r\n    \"CasCvtPar\":\"none\",\r\n    \"CasCvtLnk\":\"#\",\r\n    \"CasCvtBlq\":\"N\",\r\n    \"CasCvtBlqDtt\":\"2000-12-31 23:59:58\",\r\n    \"CasCvtEnv\":\"S\",\r\n    \"CasCvtEnvDtt\":\"2000-12-31 23:59:58\",\r\n    \"CasCvtCnf\":\"S\",\r\n    \"CasCvtCnfDtt\":\"2000-12-31 23:59:58\",\r\n    \"CasCvtChv\":\"00090faa0001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasCvt"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mail",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFem"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFem/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFem"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFem/id/1"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFemCod\":\"1\",\r\n    \"CasFemDca\":\"2000-12-31 23:59:59\",\r\n    \"CasFemDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasFemDsc\":\"mail\",\r\n    \"CasFemBlq\":\"N\",\r\n    \"CasFemGerFlg\":\"N\",\r\n    \"CasFemGerDtt\":\"2000-12-31 23:59:59\",\r\n    \"CasFemEnvFlg\":\"N\",\r\n    \"CasFemEnvDtt\":\"2000-12-31 23:59:59\",\r\n    \"CasFemPar\":\"details\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFem"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFemCod\":\"1\",\r\n    \"CasFemDca\":\"2000-12-31 23:59:59\",\r\n    \"CasFemDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasFemDsc\":\"mail\",\r\n    \"CasFemBlq\":\"S\",\r\n    \"CasFemGerFlg\":\"N\",\r\n    \"CasFemGerDtt\":\"2000-12-31 23:59:59\",\r\n    \"CasFemEnvFlg\":\"N\",\r\n    \"CasFemEnvDtt\":\"2000-12-31 23:59:59\",\r\n    \"CasFemPar\":\"details\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFem"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mail To",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemTo"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemTo/id/1/admin@provedor.net"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemTo"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemTo/id/1/admin@provedor.net"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFemCod\":\"1\",\r\n    \"CasFemToDca\":\"2000-12-31 23:59:59\",\r\n    \"CasFemToDmd\":\"2000-12-31 23:59:58\",\r\n    \"CasFemToMai\":\"admin@provedor.net\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemTo"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFemCod\":\"1\",\r\n    \"CasFemToDca\":\"2000-12-31 23:59:59\",\r\n    \"CasFemToDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasFemToMai\":\"admin@provedor.net\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemTo"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mail Cc",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemCc"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemCc/id/1/admin@provedor.net"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemCc"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemCc/id/1/admin@provedor.net"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFemCod\":\"1\",\r\n    \"CasFemCcDca\":\"2000-12-31 23:59:59\",\r\n    \"CasFemCcDmd\":\"2000-12-31 23:59:58\",\r\n    \"CasFemCcMai\":\"admin@provedor.net\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemCc"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFemCod\":\"1\",\r\n    \"CasFemCcDca\":\"2000-12-31 23:59:59\",\r\n    \"CasFemCcDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasFemCcMai\":\"admin@provedor.net\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemCc"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mail Cco",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemCco"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemCco/id/1/admin@provedor.net"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemCco"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemCco/id/1/admin@provedor.net"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFemCod\":\"1\",\r\n    \"CasFemCcoDca\":\"2000-12-31 23:59:59\",\r\n    \"CasFemCcoDmd\":\"2000-12-31 23:59:58\",\r\n    \"CasFemCcoMai\":\"admin@provedor.net\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemCco"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFemCod\":\"1\",\r\n    \"CasFemCcoDca\":\"2000-12-31 23:59:59\",\r\n    \"CasFemCcoDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasFemCcoMai\":\"admin@provedor.net\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemCco"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mail Attachments",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemAnx"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemAnx/id/1/1"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemAnx"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemAnx/id/1/1"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFemCod\":\"1\",\r\n    \"CasFemAnxCod\":\"1\",\r\n    \"CasFemAnxDca\":\"2000-12-31 23:59:59\",\r\n    \"CasFemAnxDmd\":\"2000-12-31 23:59:58\",\r\n    \"CasFemAnxDsc\":\"test\",\r\n    \"CasFemAnxDir\":\"temp\",\r\n    \"CasFemAnxNme\":\"test\",\r\n    \"CasFemAnxExt\":\"txt\",\r\n    \"CasFemAnxSze\":\"144\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemAnx"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasFemCod\":\"1\",\r\n    \"CasFemAnxCod\":\"1\",\r\n    \"CasFemAnxDca\":\"2000-12-31 23:59:59\",\r\n    \"CasFemAnxDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasFemAnxDsc\":\"test update\",\r\n    \"CasFemAnxDir\":\"temp\",\r\n    \"CasFemAnxNme\":\"test\",\r\n    \"CasFemAnxExt\":\"txt\",\r\n    \"CasFemAnxSze\":\"144\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasFemAnx"
 					},
 					"response": []
 				}

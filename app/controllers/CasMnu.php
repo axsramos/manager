@@ -2,7 +2,7 @@
 
 use app\core\Controller;
 
-class CasIdy extends Controller
+class CasMnu extends Controller
 {
     private $data_content = [];
 
@@ -26,6 +26,8 @@ class CasIdy extends Controller
                 case 'PUT':
                     $this->methodPut();
                     break;
+                case 'DELETE':
+                    $this->methodDelete('');
                 default:
                     # code...
                     break;
@@ -37,12 +39,12 @@ class CasIdy extends Controller
     {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             if ($id == null) {
-                $csCasIdy = $this->model('CasIdy');
-                $data = $csCasIdy->readAllLines();
+                $csCasMnu = $this->model('CasMnu');
+                $data = $csCasMnu->readAllLines();
             } else {
-                $csCasIdy = $this->model('CasIdy');
-                $csCasIdy->setCasIdyCod($id);
-                $data = $csCasIdy->readLine();
+                $csCasMnu = $this->model('CasMnu');
+                $csCasMnu->setCasMnuCod($id);
+                $data = $csCasMnu->readLine();
             }
         }
         if ($_SERVER['REQUEST_METHOD'] == 'DELETE') {
@@ -62,43 +64,37 @@ class CasIdy extends Controller
         $message  = new MessageDictionary;
         $messages = array();
 
-        $csCasIdy = $this->model('CasIdy');
+        $csCasMnu = $this->model('CasMnu');
 
-        if (isset($this->data_content->CasIdyCod)) {
-            $csCasIdy->setCasIdyCod($this->data_content->CasIdyCod);
+        if (isset($this->data_content->CasMnuCod)) {
+            $csCasMnu->setCasMnuCod($this->data_content->CasMnuCod);
         }
-        if (isset($this->data_content->CasIdyDca)) {
-            $csCasIdy->setCasIdyDca($this->data_content->CasIdyDca);
+        if (isset($this->data_content->CasMnuDca)) {
+            $csCasMnu->setCasMnuDca($this->data_content->CasMnuDca);
         }
-        if (isset($this->data_content->CasIdyDmd)) {
-            $csCasIdy->setCasIdyDmd($this->data_content->CasIdyDmd);
+        if (isset($this->data_content->CasMnuDmd)) {
+            $csCasMnu->setCasMnuDmd($this->data_content->CasMnuDmd);
         }
-        if (isset($this->data_content->CasIdyDsc)) {
-            $csCasIdy->setCasIdyDsc($this->data_content->CasIdyDsc);
+        if (isset($this->data_content->CasMnuDsc)) {
+            $csCasMnu->setCasMnuDsc($this->data_content->CasMnuDsc);
         }
-        if (isset($this->data_content->CasIdyLck)) {
-            $csCasIdy->setCasIdyLck($this->data_content->CasIdyLck);
+        if (isset($this->data_content->CasMnuBlq)) {
+            $csCasMnu->setCasMnuBlq($this->data_content->CasMnuBlq);
         }
-        if (isset($this->data_content->CasIdyTkn)) {
-            $csCasIdy->setCasIdyTkn($this->data_content->CasIdyTkn);
+        if (isset($this->data_content->CasMnuVch)) {
+            $csCasMnu->setCasMnuVch($this->data_content->CasMnuVch);
         }
-        if (isset($this->data_content->CasIdyUpt)) {
-            $csCasIdy->setCasIdyUpt($this->data_content->CasIdyUpt);
-        }
-        if (isset($this->data_content->CasIdyExp)) {
-            $csCasIdy->setCasIdyExp($this->data_content->CasIdyExp);
-        }
-        if (isset($this->data_content->CasIdyAtz)) {
-            $csCasIdy->setCasIdyAtz($this->data_content->CasIdyAtz);
+        if (isset($this->data_content->CasMnuOrd)) {
+            $csCasMnu->setCasMnuOrd($this->data_content->CasMnuOrd);
         }
 
-        if ($csCasIdy->insertLine()) {
+        if ($csCasMnu->insertLine()) {
             http_response_code(201);
             array_push($messages, $message->getDictionaryError(0, "Messages", "Success."));
         } else {
             http_response_code(200);
-            if (count($csCasIdy->messages)> 0) {
-                foreach ($csCasIdy->messages as $message_item) {
+            if (count($csCasMnu->messages) > 0) {
+                foreach ($csCasMnu->messages as $message_item) {
                     array_push($messages, $message_item);
                 }
             } else {
@@ -113,43 +109,37 @@ class CasIdy extends Controller
         $message  = new MessageDictionary;
         $messages = array();
 
-        $csCasIdy = $this->model('CasIdy');
+        $csCasMnu = $this->model('CasMnu');
 
-        if (isset($this->data_content->CasIdyCod)) {
-            $csCasIdy->setCasIdyCod($this->data_content->CasIdyCod);
+        if (isset($this->data_content->CasMnuCod)) {
+            $csCasMnu->setCasMnuCod($this->data_content->CasMnuCod);
         }
-        if (isset($this->data_content->CasIdyDca)) {
-            $csCasIdy->setCasIdyDca($this->data_content->CasIdyDca);
+        if (isset($this->data_content->CasMnuDca)) {
+            $csCasMnu->setCasMnuDca($this->data_content->CasMnuDca);
         }
-        if (isset($this->data_content->CasIdyDmd)) {
-            $csCasIdy->setCasIdyDmd($this->data_content->CasIdyDmd);
+        if (isset($this->data_content->CasMnuDmd)) {
+            $csCasMnu->setCasMnuDmd($this->data_content->CasMnuDmd);
         }
-        if (isset($this->data_content->CasIdyDsc)) {
-            $csCasIdy->setCasIdyDsc($this->data_content->CasIdyDsc);
+        if (isset($this->data_content->CasMnuDsc)) {
+            $csCasMnu->setCasMnuDsc($this->data_content->CasMnuDsc);
         }
-        if (isset($this->data_content->CasIdyLck)) {
-            $csCasIdy->setCasIdyLck($this->data_content->CasIdyLck);
+        if (isset($this->data_content->CasMnuBlq)) {
+            $csCasMnu->setCasMnuBlq($this->data_content->CasMnuBlq);
         }
-        if (isset($this->data_content->CasIdyTkn)) {
-            $csCasIdy->setCasIdyTkn($this->data_content->CasIdyTkn);
+        if (isset($this->data_content->CasMnuVch)) {
+            $csCasMnu->setCasMnuVch($this->data_content->CasMnuVch);
         }
-        if (isset($this->data_content->CasIdyUpt)) {
-            $csCasIdy->setCasIdyUpt($this->data_content->CasIdyUpt);
-        }
-        if (isset($this->data_content->CasIdyExp)) {
-            $csCasIdy->setCasIdyExp($this->data_content->CasIdyExp);
-        }
-        if (isset($this->data_content->CasIdyAtz)) {
-            $csCasIdy->setCasIdyAtz($this->data_content->CasIdyAtz);
+        if (isset($this->data_content->CasMnuOrd)) {
+            $csCasMnu->setCasMnuOrd($this->data_content->CasMnuOrd);
         }
 
-        if ($csCasIdy->updateLine()) {
+        if ($csCasMnu->updateLine()) {
             http_response_code(202);
             array_push($messages, $message->getDictionaryError(0, "Messages", "Success."));
         } else {
             http_response_code(200);
-            if (count($csCasIdy->messages)> 0) {
-                foreach ($csCasIdy->messages as $message_item) {
+            if (count($csCasMnu->messages) > 0) {
+                foreach ($csCasMnu->messages as $message_item) {
                     array_push($messages, $message_item);
                 }
             } else {
@@ -166,14 +156,14 @@ class CasIdy extends Controller
 
         http_response_code(200);
 
-        $csCasIdy = $this->model('CasIdy');
-        $csCasIdy->setCasIdyCod($id);
+        $csCasMnu = $this->model('CasMnu');
+        $csCasMnu->setCasMnuCod($id);
 
-        if ($csCasIdy->deleteLine()) {
+        if ($csCasMnu->deleteLine()) {
             array_push($messages, $message->getDictionaryError(0, "Messages", "Success."));
         } else {
-            if (count($csCasIdy->messages)> 0) {
-                foreach ($csCasIdy->messages as $message_item) {
+            if (count($csCasMnu->messages) > 0) {
+                foreach ($csCasMnu->messages as $message_item) {
                     array_push($messages, $message_item);
                 }
             } else {

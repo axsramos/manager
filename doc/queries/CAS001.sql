@@ -50,8 +50,8 @@ create table CasMpr (
 	constraint PKCasMpr primary key (CasMdlCod, CasPrgCod),
 	constraint FKCasMpr01 foreign key (CasMdlCod) references CasMdl (CasMdlCod),
 	constraint FKCasMpr02 foreign key (CasPrgCod) references CasPrg (CasPrgCod),
-    index ICasMpr01 (CasMdlCod asc),
-    index ICasMpr02 (CasPrgCod asc)
+	index ICasMpr01 (CasMdlCod asc),
+	index ICasMpr02 (CasPrgCod asc)
 )
 ;
 -- // Funcionalidade // --
@@ -74,8 +74,8 @@ create table CasFpr (
 	constraint PKCasFpr primary key (CasFunCod, CasPrgCod),
 	constraint FKCasFpr01 foreign key (CasFunCod) references CasFun (CasFunCod),
 	constraint FKCasFpr02 foreign key (CasPrgCod) references CasPrg (CasPrgCod),
-    index ICasFpr01 (CasFunCod asc),
-    index ICasFpr02 (CasPrgCod asc)
+	index ICasFpr01 (CasFunCod asc),
+	index ICasFpr02 (CasPrgCod asc)
 )
 ;
 -- // Work Station // --
@@ -324,8 +324,8 @@ create table CasFemCco (
 create table CasFemAnx (
 	CasFemCod int not null,
 	CasFemAnxCod int not null,
-	CasFemDcaAnx datetime default now() not null,
-	CasFemDmdAnx datetime default now() not null,
+	CasFemAnxDca datetime default now() not null,
+	CasFemAnxDmd datetime default now() not null,
 	CasFemAnxDsc character(65) not null,
 	CasFemAnxDir character(255) null,
 	CasFemAnxNme character(255) null,

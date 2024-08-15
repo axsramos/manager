@@ -3,8 +3,10 @@
 namespace app\models;
 
 use app\core\Database;
+use MessageDictionary;
 use PDO;
 
+require_once('app/shared/message_dictionary.php');
 
 class CasPar
 {
@@ -24,51 +26,11 @@ class CasPar
     private $cnx;
     private $tbl = 'CasPar';
 
+    public $messages = array();
+
     public function __construct()
     {
         $this->cnx = new Database();
-    }
-
-    // -- set -- //
-    public function setCasParCod($inCasParCod)
-    {
-        $this->attCasParCod = $inCasParCod;
-    }
-    public function setCasParDca($inCasParDca)
-    {
-        $this->attCasParDca = $inCasParDca;
-    }
-    public function setCasParDmd($inCasParDmd)
-    {
-        $this->attCasParDmd = $inCasParDmd;
-    }
-    public function setCasParDsc($inCasParDsc)
-    {
-        $this->attCasParDsc = $inCasParDsc;
-    }
-    public function setCasParBlq($inCasParBlq)
-    {
-        $this->attCasParBlq = $inCasParBlq;
-    }
-    public function setCasParSeq($inCasParSeq)
-    {
-        $this->attCasParSeq = $inCasParSeq;
-    }
-    public function setCasParInt($inCasParInt)
-    {
-        $this->attCasParInt = $inCasParInt;
-    }
-    public function setCasParDec($inCasParDec)
-    {
-        $this->attCasParDec = $inCasParDec;
-    }
-    public function setCasParSep($inCasParSep)
-    {
-        $this->attCasParSep = $inCasParSep;
-    }
-    public function setCasParVch($inCasParVch)
-    {
-        $this->attCasParVch = $inCasParVch;
     }
 
     // -- get -- //
@@ -111,6 +73,48 @@ class CasPar
     public function getCasParVch()
     {
         return $this->attCasParVch;
+    }
+
+    // -- set -- //
+    public function setCasParCod($inCasParCod)
+    {
+        $this->attCasParCod = $inCasParCod;
+    }
+    public function setCasParDca($inCasParDca)
+    {
+        $this->attCasParDca = $inCasParDca;
+    }
+    public function setCasParDmd($inCasParDmd)
+    {
+        $this->attCasParDmd = $inCasParDmd;
+    }
+    public function setCasParDsc($inCasParDsc)
+    {
+        $this->attCasParDsc = $inCasParDsc;
+    }
+    public function setCasParBlq($inCasParBlq)
+    {
+        $this->attCasParBlq = $inCasParBlq;
+    }
+    public function setCasParSeq($inCasParSeq)
+    {
+        $this->attCasParSeq = $inCasParSeq;
+    }
+    public function setCasParInt($inCasParInt)
+    {
+        $this->attCasParInt = $inCasParInt;
+    }
+    public function setCasParDec($inCasParDec)
+    {
+        $this->attCasParDec = $inCasParDec;
+    }
+    public function setCasParSep($inCasParSep)
+    {
+        $this->attCasParSep = $inCasParSep;
+    }
+    public function setCasParVch($inCasParVch)
+    {
+        $this->attCasParVch = $inCasParVch;
     }
 
     // -- crud -- //
@@ -343,12 +347,23 @@ class CasPar
         $stmt = $this->cnx->executeQuery($qry, $parameters);
         $rows = $stmt->rowCount();
         
+        if ($rows > 0) {
+            $message  = new MessageDictionary;
+            array_push($this->messages, $message->getDictionaryError(1, "Messages", "Duplicate Key."));
+        }
+
         return !boolval($rows);
     }
 
     private function check_referencial_key()
     {
         $rows = 0;
+
+        if ($rows > 0) {
+            $message  = new MessageDictionary;
+            array_push($this->messages, $message->getDictionaryError(1, "Messages", "Referential integrity error."));
+        }
+
         return !boolval($rows);
     }
 }

@@ -102,7 +102,13 @@ class CasPar extends Controller
             array_push($messages, $message->getDictionaryError(0, "Messages", "Success."));
         } else {
             http_response_code(200);
-            array_push($messages, $message->getDictionaryError(1, "Messages", "Failed."));
+            if (count($csCasPar->messages)> 0) {
+                foreach ($csCasPar->messages as $message_item) {
+                    array_push($messages, $message_item);
+                }
+            } else {
+                array_push($messages, $message->getDictionaryError(1, "Messages", "Failed."));
+            }
         }
         $this->view('json_result', array("Messages" => $messages));
     }
@@ -150,7 +156,13 @@ class CasPar extends Controller
             array_push($messages, $message->getDictionaryError(0, "Messages", "Success."));
         } else {
             http_response_code(200);
-            array_push($messages, $message->getDictionaryError(1, "Messages", "Failed."));
+            if (count($csCasPar->messages)> 0) {
+                foreach ($csCasPar->messages as $message_item) {
+                    array_push($messages, $message_item);
+                }
+            } else {
+                array_push($messages, $message->getDictionaryError(1, "Messages", "Failed."));
+            }
         }
         $this->view('json_result', array("Messages" => $messages));
     }
@@ -168,7 +180,13 @@ class CasPar extends Controller
         if ($csCasPar->deleteLine()) {
             array_push($messages, $message->getDictionaryError(0, "Messages", "Success."));
         } else {
-            array_push($messages, $message->getDictionaryError(1, "Messages", "Failed."));
+            if (count($csCasPar->messages)> 0) {
+                foreach ($csCasPar->messages as $message_item) {
+                    array_push($messages, $message_item);
+                }
+            } else {
+                array_push($messages, $message->getDictionaryError(1, "Messages", "Failed."));
+            }
         }
         $this->view('json_result', array("Messages" => $messages));
     }
