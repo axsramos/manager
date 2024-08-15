@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "d2555d52-eed4-4f10-9efe-b16e2c589ab3",
+		"name": "Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5624588"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Identity",
+								"value": "50f2e580-bd30-11ea-877c-fc4596f8a36d",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}:{{port}}/{{app}}/token"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Parameter",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPar"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPar/id/version"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPar"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPar/id/version"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasParCod\":\"version\",\r\n    \"CasParDca\":\"2000-12-31 23:59:59\",\r\n    \"CasParDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasParDsc\":\"SYSTEM VERSION 2\",\r\n    \"CasParBlq\":\"N\",\r\n    \"CasParSeq\":\"0\",\r\n    \"CasParInt\":\"0\",\r\n    \"CasParDec\":\"0\",\r\n    \"CasParSep\":\"0\",\r\n    \"CasParVch\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPar"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasParCod\":\"version\",\r\n    \"CasParDca\":\"2000-12-31 23:59:59\",\r\n    \"CasParDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasParDsc\":\"SYSTEM VERSION test\",\r\n    \"CasParBlq\":\"N\",\r\n    \"CasParSeq\":\"1\",\r\n    \"CasParInt\":\"8\",\r\n    \"CasParDec\":\"2\",\r\n    \"CasParSep\":\"2\",\r\n    \"CasParVch\":\"xyz-test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasPar"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Identity",
+			"item": [
+				{
+					"name": "options",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "OPTIONS",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasIdy"
+					},
+					"response": []
+				},
+				{
+					"name": "readLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasIdy/id/d2f184b1-5a47-11ef-9fed-00090faa0001"
+					},
+					"response": []
+				},
+				{
+					"name": "readAllLines",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasIdy"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}:{{port}}/{{app}}/CasIdy/id/d2f184b1-5a47-11ef-9fed-00090faa0001"
+					},
+					"response": []
+				},
+				{
+					"name": "insertLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasIdyCod\":\"d2f184b1-5a47-11ef-9fed-00090faa0001\",\r\n    \"CasIdyDca\":\"2000-12-31 23:59:59\",\r\n    \"CasIdyDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasIdyDsc\":\"Access Manager Test\",\r\n    \"CasIdyLck\":\"N\",\r\n    \"CasIdyTkn\":\"00090faa0001\",\r\n    \"CasIdyUpt\":\"2000-12-31 23:59:59\",\r\n    \"CasIdyExp\":\"2000-12-31 23:59:59\",\r\n    \"CasIdyAtz\":\"N\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasIdy"
+					},
+					"response": []
+				},
+				{
+					"name": "updateLine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"CasIdyCod\":\"d2f184b1-5a47-11ef-9fed-00090faa0001\",\r\n    \"CasIdyDca\":\"2000-12-31 23:59:59\",\r\n    \"CasIdyDmd\":\"2000-12-31 23:59:59\",\r\n    \"CasIdyDsc\":\"Access Manager\",\r\n    \"CasIdyLck\":\"S\",\r\n    \"CasIdyTkn\":\"00090faa0001\",\r\n    \"CasIdyUpt\":\"2000-12-31 23:59:59\",\r\n    \"CasIdyExp\":\"2000-12-31 23:59:59\",\r\n    \"CasIdyAtz\":\"S\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}:{{port}}/{{app}}/CasIdy"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "{{base_url}}:{{port}}/{{app}}/"
+			},
+			"response": []
+		}
+	]
+}
